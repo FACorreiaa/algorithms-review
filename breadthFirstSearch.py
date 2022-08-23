@@ -1,3 +1,5 @@
+# OV(v+e) time | O(v) space
+#v = nodes, e = edges
 class Node:
     def _init__(self, name):
         self.children = []
