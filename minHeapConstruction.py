@@ -36,6 +36,9 @@ class minHeap:
     def peek(self):
         return self.heap[0]
 
+    def swap(self, i, j, heap):
+        heap[i], heap[j] = heap[j], heap[i]
+
     # O(log(n)) time | O(1) space
     def remove(self):
         swap(0, len(self.heap) - 1, self.heap)
@@ -46,6 +49,3 @@ class minHeap:
     def insert(self, value):
         self.heap.append(value)
         self.siftUp(len(self.heap) - 1, self.heap)
-
-    def swap(self, i, j, heap):
-        heap[i], heap[j] = heap[j], heap[i]
