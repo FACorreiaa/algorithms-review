@@ -19,7 +19,7 @@ def explore(i, j, board, treeNode, visited, finalWords):
     if letter not in treeNode:
         return
     visited[i][j] = True
-    treeNode = treeNode[letter]
+    TreeNode = treeNode[letter]
     if "*" in TreeNode:
         finalWords[TreeNode["*"]] = True
     neighbors = getNeighbours(i, j, board)
