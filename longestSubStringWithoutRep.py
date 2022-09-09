@@ -7,6 +7,6 @@ def longestSubstringWithoutDuplication(string):
         if char in lastSeen:
             startId = max(startId, lastSeen[char] + 1)
         if longest[1] - longest[0] < i + 1 - startId:
-            longest = [startIdx, i + 1]
+            longest = [startId, i + 1]
         lastSeen[char] = i
     return string[longest[0]:longest[1]]
